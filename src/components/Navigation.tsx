@@ -65,7 +65,7 @@ export default function Navigation({ currentLocale }: { currentLocale: string })
             rel="noopener noreferrer"
             className="hidden sm:flex items-center justify-center px-6 py-2.5 rounded-full bg-[#007AFF] text-white text-[10px] font-bold uppercase tracking-widest transition-all hover:bg-[#0056b3] shadow-blue-glow"
           >
-            Connect
+            {t('connect')}
           </a>
         </div>
       </div>

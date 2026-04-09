@@ -25,10 +25,10 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/ecosystem" className="px-10 py-4 rounded-full bg-[#007AFF] hover:bg-[#0056b3] text-white font-bold transition-all shadow-blue-glow">
-              Explore Ecosystem
+              {t('buttons.ecosystem')}
             </Link>
             <a href="https://gitbook.wefi.co/" target="_blank" rel="noopener noreferrer" className="px-10 py-4 rounded-full border border-white/10 hover:bg-white/5 text-white font-bold transition-all">
-              Read Technical Docs
+              {t('buttons.docs')}
             </a>
           </div>
         </div>
@@ -40,19 +40,19 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/5 text-center">
             <div className="flex flex-col">
               <div className="text-3xl lg:text-5xl font-bold font-outfit tracking-tighter text-[#007AFF] mb-2 shadow-blue-glow">200k+</div>
-              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">Users</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">{t('stats.users')}</div>
             </div>
             <div className="flex flex-col">
               <div className="text-3xl lg:text-5xl font-bold font-outfit tracking-tighter mb-2 text-[#8A2BE2]">$150M+</div>
-              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">Monthly Volume</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">{t('stats.volume')}</div>
             </div>
             <div className="flex flex-col">
               <div className="text-3xl lg:text-5xl font-bold font-outfit tracking-tighter mb-2">153</div>
-              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">Jurisdictions</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">{t('stats.jurisdictions')}</div>
             </div>
             <div className="flex flex-col">
               <div className="text-3xl lg:text-5xl font-bold font-outfit tracking-tighter mb-2">500k+</div>
-              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">Operational Nodes</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">{t('stats.nodes')}</div>
             </div>
           </div>
         </div>
@@ -80,9 +80,9 @@ export default function HomePage() {
         <div className="container mx-auto max-w-4xl glass-panel p-12 md:p-20 relative overflow-hidden text-center md:text-left">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#007AFF]/10 to-transparent blur-3xl"></div>
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 uppercase tracking-tighter">Onchain Solvency</h2>
+            <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 uppercase tracking-tighter">{t('narrative.title')}</h2>
             <p className="text-xl text-white/50 leading-relaxed mb-10 italic">
-              "WeFi is not just another bank; it's a protocol for trust. By moving the internal ledger to WeChain, we eliminate human error and fraud."
+              {t('narrative.quote')}
             </p>
             <div className="flex items-center justify-center md:justify-start gap-4">
               <div className="w-12 h-12 rounded-full border-2 border-[#007AFF] overflow-hidden">
@@ -90,7 +90,7 @@ export default function HomePage() {
               </div>
               <div>
                 <div className="font-bold font-outfit uppercase tracking-tighter">Reeve Collins</div>
-                <div className="text-xs text-white/30 uppercase tracking-widest font-bold">Chairman of WeFi</div>
+                <div className="text-xs text-white/30 uppercase tracking-widest font-bold">{t('narrative.role')}</div>
               </div>
             </div>
           </div>

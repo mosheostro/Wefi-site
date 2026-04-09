@@ -96,15 +96,15 @@ export default function EcosystemPage() {
       {/* Amortization Table / Visual */}
       <div className="glass-panel p-1 border-white/5 overflow-hidden rounded-[40px]">
         <div className="bg-gradient-to-br from-[#121212] via-[#007AFF]/5 to-[#121212] p-12 md:p-20 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 uppercase tracking-tighter">Deterministic Governance</h2>
+          <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 uppercase tracking-tighter">{t('governance.title')}</h2>
           <div className="max-w-2xl mx-auto text-white/40 text-sm leading-relaxed mb-12">
-            The emission protocol is fixed by code. Every 730 days, the rewards per block halven, ensuring long-term scarcity and commitment to the 1 Billion WFI cap.
+            {t('governance.desc')}
           </div>
           <div className="flex justify-center gap-8 md:gap-24 flex-wrap">
             {[
-              { label: "Cycle", value: "730 Days" },
-              { label: "Mining", value: "CBM-20" },
-              { label: "Limit", value: "1,000,000,000" }
+              { label: t('governance.cycle'), value: "730 Days" },
+              { label: t('governance.mining'), value: "CBM-20" },
+              { label: t('governance.limit'), value: "1,000,000,000" }
             ].map((stat, i) => (
               <div key={i} className="flex flex-col gap-2">
                 <div className="text-4xl font-bold font-outfit tracking-tighter text-white">{stat.value}</div>

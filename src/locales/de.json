@@ -8,35 +8,66 @@
     "visualFlow": "Visueller Fluss",
     "knowledge": "Wissensdatenbank",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "connect": "Verbinden"
   },
   "HomePage": {
     "hero": {
-      "title": "Die weltweit erste Onchain-Deobank",
-      "subtitle": "Die Brücke zwischen traditionellen Finanzen und Web3",
+      "title": "Die erste Onchain-Deobank der Welt",
+      "subtitle": "Brücke zwischen traditionellem Finanzwesen und Web3",
       "description": "WeFi nutzt die WeChain-Blockchain, um sichere, transparente und regulierte Bankdienstleistungen direkt on-chain anzubieten."
     },
     "highlights": {
       "deobank": {
-        "title": "Globale Erreichbarkeit",
-        "desc": "Bankdienstleistungen ohne Zwischenhändler, überall auf der Welt."
+        "title": "Globale Zugänglichkeit",
+        "desc": "Greifen Sie auf Bankdienstleistungen ohne Vermittler weltweit zu."
       },
       "mpc": {
         "title": "MPC-Sicherheit",
-        "desc": "Ihre Schlüssel, Ihre Kontrolle. Multi-Party Computation sorgt für Sicherheit auf institutionellem Niveau."
+        "desc": "Ihre Schlüssel, Ihre Kontrolle. Multi-Party Computation sorgt für institutionelle Sicherheit."
       },
       "cards": {
-        "title": "WeFi Visa-Karten",
-        "desc": "Geben Sie Ihre Kryptowährungen überall aus, mit sofortiger Umrechnung in Fiat-Geld."
+        "title": "WeFi Visa Karten",
+        "desc": "Geben Sie Ihre Krypto weltweit mit sofortiger Umwandlung in Fiat aus."
       }
+    },
+    "stats": {
+      "users": "Nutzer",
+      "volume": "Monatliches Volumen",
+      "jurisdictions": "Rechtsordnungen",
+      "nodes": "Betriebsknoten"
+    },
+    "narrative": {
+      "title": "Onchain Solvenz",
+      "quote": "\"WeFi ist nicht nur eine weitere Bank; es ist ein Protokoll für Vertrauen. Indem wir das interne Kontobuch auf WeChain verlagern, eliminieren wir menschliche Fehler und Betrug.\"",
+      "role": "Vorsitzender von WeFi"
+    },
+    "buttons": {
+      "ecosystem": "Ökosystem erkunden",
+      "docs": "Technische Dokumentation"
     }
   },
   "AboutPage": {
     "title": "Unsere Mission",
-    "vision": "Ein transparentes Finanzökosystem zu schaffen, in dem Mathematik den Ruf als Grundlage des Vertrauens ersetzt.",
+    "vision": "Ein transparentes finanzielles Ökosystem schaffen, in dem Mathematik Reputation als Grundlage des Vertrauens ersetzt.",
     "onchainAccounting": {
-      "title": "Onchain-Buchhaltung",
-      "desc": "Im Gegensatz zu intransparenten traditionellen Banken arbeitet WeFi auf einem transparenten Ledger."
+      "title": "Onchain Buchhaltung",
+      "desc": "Echtzeit-Prüfung garantiert, dass jeder Dollar in WeChain verbucht ist."
+    },
+    "proofOfSolvency": {
+      "title": "Solvenznachweis",
+      "desc": "Echtzeit-Prüfung garantiert, dass jeder Dollar in WeChain verbucht ist. WeFi ist keine traditionelle Bank mit Teilreservesystem; alles FIAT ist sicher gedeckt."
+    },
+    "pioneers": {
+      "title": "Geführt von Krypto-Pionieren",
+      "desc": "WeFi wurde von Veteranen von Tether, Wise, Binance und Visa aufgebaut. Dies ist nicht unser erster Durchbruch. Aber es könnte Ihrer sein.",
+      "btn": "Gründer kennenlernen"
+    },
+    "trust": "VERTRAUEN IN MATHEMATIK",
+    "timeline": {
+      "phase": "Phase: Episode 3",
+      "reach": "Händler-Reichweite",
+      "architecture": "MPC Protokoll Architektur"
     }
   },
   "TeamPage": {
@@ -46,48 +77,135 @@
       "reeve": {
         "name": "Reeve Collins",
         "role": "Vorsitzender",
-        "bio": "Mitbegründer von Tether (USDT). Ein Pionier, der den Stablecoin-Markt geprägt hat."
+        "bio": "Mitbegründer von Tether (USDT)."
       },
       "maksym": {
         "name": "Maksym Sakharov",
-        "role": "CEO der Gruppe",
-        "bio": "Ehemaliger CEO bei Exflow, Experte für die Skalierung von Finanzinfrastrukturen."
+        "role": "Group CEO",
+        "bio": "Ehemaliger CEO bei Exflow."
       },
       "roman": {
         "name": "Roman Rossov",
         "role": "CPO",
-        "bio": "Ehemaliger Produktdirektor bei Wise. Bringt globale Zahlungsexpertise zu Web3."
+        "bio": "Ehemaliger Produktdirektor bei Wise."
       },
       "khalid": {
         "name": "Khaled Suleiman",
         "role": "Vorstandsmitglied",
-        "bio": "ex-CEO bei der National Bank of Abu Dhabi"
+        "bio": "Ehemaliger CEO der National Bank of Abu Dhabi"
       },
       "michael": {
         "name": "Michael Batuev",
-        "role": "Zahlungsverkehrsleiter",
+        "role": "Leiter Zahlungsverkehr",
         "bio": "ex-VISA"
       }
     }
   },
   "EcosystemPage": {
-    "title": "WFI-Tokenomics",
+    "title": "WFI Tokenomics",
     "token": {
       "name": "$WFI Token",
-      "desc": "Das native Asset von WeChain. Verwendet für Gebühren, Staking und Governance."
+      "desc": "Der systemeigene Vermögenswert von WeChain."
     },
     "energy": {
       "title": "Energie-Mechanismus",
       "desc": "Eine einzigartige Loyalitätseinheit, die durch das Halten von $WFI generiert wird."
     },
     "halving": "2-Jahres-Halving-Zyklus",
-    "supply": "Gesamtangebot: 1 Milliarde WFI"
+    "supply": "Gesamtangebot: 1 Milliarde WFI",
+    "governance": {
+      "title": "Deterministische Governance",
+      "desc": "Das Emissionsprotokoll ist vertraglich festgelegt. Alle 730 Tage wird die Blockbelohnung halbiert.",
+      "cycle": "Zyklus",
+      "mining": "Mining",
+      "limit": "Limit"
+    }
   },
   "VisualFlow": {
-    "title": "Konzeptueller Wertefluss",
-    "fiatIn": "Fiat-Einzahlung",
-    "conversion": "Smart-Konvertierung",
-    "onchain": "Onchain-Assets",
-    "spend": "Fiat-Ausgabe / Karte"
+    "title": "Konzeptioneller Wertefluss",
+    "fiatIn": "Fiat Einzahlung",
+    "conversion": "Smart Konvertierung",
+    "onchain": "Onchain Assets",
+    "spend": "Fiat Ausgabe / Karte"
+  },
+  "ContactPage": {
+    "title": "Kontakt",
+    "desc": "Schließen Sie sich der Zukunft der Finanzen an. Kontaktieren Sie unser Team für Partnerschaften.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "email@adresse.com",
+      "message": "Nachricht",
+      "messagePlaceholder": "Wie können wir helfen?",
+      "send": "Nachricht Senden"
+    },
+    "socials": {
+      "email": "E-Mail",
+      "twitter": "Twitter / X",
+      "telegram": "Telegram",
+      "joinCommunity": "Community beitreten"
+    }
+  },
+  "BlogPage": {
+    "title": "Neueste Erkenntnisse",
+    "readArticle": "Artikel lesen +",
+    "posts": [
+      { "title": "Episode 3: Der Beginn des Onchain-Bankings", "date": "April 2026", "category": "Ökosystem" },
+      { "title": "Mcp verstehen: Warum Seed Phrases veraltet sind", "date": "März 2026", "category": "Technologie" },
+      { "title": "WeFi Roadmap: Skalierung der globalen Liquidität", "date": "Februar 2026", "category": "Vision" }
+    ]
+  },
+  "PlatformPage": {
+    "title": "Banking neu definiert",
+    "desc": "Modulare Finanzdienstleistungen auf dem weltweit ersten dezentralisierten Onchain-Stack.",
+    "products": {
+      "unified": {
+        "title": "Zentralisierte Bilanz",
+        "desc": "Angetrieben durch DEONE - Onchain Banking. Verbindet Banken mit Blockchain."
+      },
+      "cards": {
+        "title": "WeFi Visa Karten",
+        "desc": "Geben Sie Ihre digitalen Vermögenswerte weltweit mit Umwandlung in Fiat aus."
+      },
+      "credit": {
+        "title": "Dezentraler Kredit",
+        "desc": "Leihen Sie sich sofort Geld gegen Ihre Vermögenswerte ohne Bonitätsprüfungen."
+      },
+      "mining": {
+        "title": "Cloud-basiertes Mining",
+        "desc": "Nehmen Sie am WFI-Emissionsprotokoll durch Cloud-hosted Mining teil."
+      }
+    },
+    "learnMore": "Mehr erfahren",
+    "mpc": {
+      "tag": "Institutionelles Niveau",
+      "title": "MPC Sicherheit Architektur",
+      "desc": "WeFi eliminiert Seed-Phrasen vollständig durch Multi-Party Computation.",
+      "point1": "Kein Single Point of Failure",
+      "point2": "Verschlüsselte Shards-Rotation"
+    }
+  },
+  "KnowledgePage": {
+    "title": "Wissensdatenbank",
+    "faqs": [
+      { "q": "Was ist eine Deobank?", "a": "Eine dezentralisierte Onchain-Bank, die über Smart Contracts arbeitet." },
+      { "q": "Wie funktioniert MPC-Sicherheit?", "a": "Transaktionen erfordern eine 2-aus-2 Signatur zur Vermeidung von Fehlern." },
+      { "q": "Was ist der Nutzen von $WFI?", "a": "Der Token wird verwendet, um Netzwerkgebühren zu bezahlen." },
+      { "q": "Wie generiere ich Energie?", "a": "Energie wird durch das Halten von $WFI in der Wallet generiert." }
+    ],
+    "gitbook": {
+      "title": "GitBook Dokumentation",
+      "desc": "Tiefer Einblick in die technische Architektur und Protokollspezifikationen.",
+      "btn": "GitBook Öffnen"
+    }
+  },
+  "Footer": {
+    "description": "Die erste Onchain-Bank, die die Stabilität des Finanzwesens mit der Freiheit von Web3 verbindet.",
+    "platform": "Plattform",
+    "resources": "Ressourcen",
+    "connect": "Verbinden",
+    "copyright": "© 2026 WeFi Deobank Network. Alle Rechte vorbehalten.",
+    "deployment": "WeFi Globale Infrastruktur"
   }
 }

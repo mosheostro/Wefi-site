@@ -3,6 +3,7 @@ import { Link } from '@/i18n/routing';
 
 export default function Footer() {
   const t = useTranslations('Navigation');
+  const tFooter = useTranslations('Footer');
 
   return (
     <footer className="w-full bg-[#121212] border-t border-white/5 py-16 mt-24">
@@ -17,12 +18,12 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/30 text-xs leading-relaxed max-w-xs">
-              The first decentralized onchain bank connecting the stability of traditional finance with the freedom of Web3.
+              {tFooter('description')}
             </p>
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#007AFF] mb-6">Platform</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#007AFF] mb-6">{tFooter('platform')}</h4>
             <ul className="space-y-4">
               {['about', 'ecosystem', 'products', 'team'].map((key) => (
                 <li key={key}>
@@ -35,7 +36,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#007AFF] mb-6">Resources</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#007AFF] mb-6">{tFooter('resources')}</h4>
             <ul className="space-y-4">
               {['visualFlow', 'knowledge', 'blog', 'contact'].map((key) => (
                 <li key={key}>
@@ -48,7 +49,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#007AFF] mb-6">Connect</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#007AFF] mb-6">{tFooter('connect')}</h4>
             <div className="flex gap-4">
               <a href="https://x.com/wefi_official" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
                 🐦
@@ -64,8 +65,8 @@ export default function Footer() {
               </a>
             </div>
             <div className="mt-8">
-              <div className="text-[8px] text-white/20 uppercase tracking-[0.2em] font-bold mb-2">WeFi Global Infrastructure</div>
-              <div className="text-[10px] text-white/40 font-bold">© 2026 WeFi Deobank Network. All rights reserved.</div>
+              <div className="text-[8px] text-white/20 uppercase tracking-[0.2em] font-bold mb-2">{tFooter('deployment')}</div>
+              <div className="text-[10px] text-white/40 font-bold">{tFooter('copyright')}</div>
             </div>
           </div>
         </div>
