@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WeFi Deobank Multi-Language Next.js Portal Architecture
 
-## Getting Started
+This documentation maps out the structural implementation of the MVP portal generated within the `wefi-portal-next` directory.
 
-First, run the development server:
+## 🏗 Component Map & Directory Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```text
+wefi-portal-next/
+├── messages/                       # i18n Dictionary Files
+│   ├── en.json                     # English strings
+│   ├── de.json                     # German strings
+│   ├── he.json                     # Hebrew strings (triggers RTL layout)
+│   └── ru.json                     # Russian strings
+├── src/
+│   ├── app/
+│   │   ├── [locale]/               # Next.js App Router dynamic translations
+│   │   │   ├── layout.tsx          # Root Layout (Injects RTL, Meta, Sidebar)
+│   │   │   ├── page.tsx            # Home / Landing Page
+│   │   │   ├── about/            
+│   │   │   ├── blog/             
+│   │   │   ├── ecosystem/        
+│   │   │   ├── knowledge/        
+│   │   │   ├── platform/           # The Drag-And-Drop Products dashboard
+│   │   │   └── technology/       
+│   ├── components/                 # Reusable React UI Modules
+│   │   ├── Navigation.tsx          # Sticky Navbar with Language Switcher
+│   │   ├── Sidebar.tsx             
+│   │   └── Widgets/                # Dashboard specific widgets (WeFi Card, Balance, etc)
+│   ├── i18n/                       # `next-intl` configuration layer
+│   │   ├── request.ts             
+│   │   └── routing.ts             
+│   ├── lib/
+│   │   └── providers/              # React Context Providers for Data/WebSockets
+│   └── middleware.ts               # HTTP Middleware routing users based on Accept-Language
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔌 API Endpoints & State Models
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Expected properties for future integration:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### WebSocket Provider
+The platform will utilize a global `<WeChainProvider>` wrapping `layout.tsx`. All widgets draw data using custom hooks (e.g., `useWeChainData`) which map directly to:
+- `wss://api.wefi.co/v1/stream/energy` -> Feeds `EnergyGraph.tsx`
+- `wss://api.wefi.co/v1/stream/balance` -> Feeds `UnifiedBalance.tsx`
 
-## Learn More
+### Widget State Props Interface
+Every UI module guarantees fallback accessibility via the following structural signature:
+```typescript
+interface WidgetProps<T> {
+  data: T | null;             // The live payload from WeChain
+  isLoading: boolean;         // Triggers skeleton borders
+  isError: Error | null;      // Triggers error fallback UI
+  isEmpty: boolean;           // Renders empty-state call-to-actions
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Styling & Theming
+Tailwind CSS handles the theming constraints:
+- **Background**: `bg-[#121212]` (Deep Anthracite)
+- **Accents**: `text-[#007AFF]`, `bg-[#007AFF]` (Electric Blue)
+- **Glassmorphism**: Achieved via `.backdrop-blur-xl` and `bg-white/5` modifiers.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Running Locally
+```bash
+cd wefi-portal-next
+npm run dev
+```
+Navigate to `http://localhost:3000`. Use the dropdown in the top right to hot-swap languages and witness RTL geometry shifting for Hebrew (`he`).

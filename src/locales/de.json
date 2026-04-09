@@ -1,0 +1,93 @@
+{
+  "Navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "ecosystem": "Ökosystem",
+    "products": "Produkte",
+    "team": "Team",
+    "visualFlow": "Visueller Fluss",
+    "knowledge": "Wissensdatenbank",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Die weltweit erste Onchain-Deobank",
+      "subtitle": "Die Brücke zwischen traditionellen Finanzen und Web3",
+      "description": "WeFi nutzt die WeChain-Blockchain, um sichere, transparente und regulierte Bankdienstleistungen direkt on-chain anzubieten."
+    },
+    "highlights": {
+      "deobank": {
+        "title": "Globale Erreichbarkeit",
+        "desc": "Bankdienstleistungen ohne Zwischenhändler, überall auf der Welt."
+      },
+      "mpc": {
+        "title": "MPC-Sicherheit",
+        "desc": "Ihre Schlüssel, Ihre Kontrolle. Multi-Party Computation sorgt für Sicherheit auf institutionellem Niveau."
+      },
+      "cards": {
+        "title": "WeFi Visa-Karten",
+        "desc": "Geben Sie Ihre Kryptowährungen überall aus, mit sofortiger Umrechnung in Fiat-Geld."
+      }
+    }
+  },
+  "AboutPage": {
+    "title": "Unsere Mission",
+    "vision": "Ein transparentes Finanzökosystem zu schaffen, in dem Mathematik den Ruf als Grundlage des Vertrauens ersetzt.",
+    "onchainAccounting": {
+      "title": "Onchain-Buchhaltung",
+      "desc": "Im Gegensatz zu intransparenten traditionellen Banken arbeitet WeFi auf einem transparenten Ledger."
+    }
+  },
+  "TeamPage": {
+    "title": "Führung & Visionäre",
+    "subtitle": "Ein Team von Veteranen von Tether, Wise, Binance und Visa.",
+    "members": {
+      "reeve": {
+        "name": "Reeve Collins",
+        "role": "Vorsitzender",
+        "bio": "Mitbegründer von Tether (USDT). Ein Pionier, der den Stablecoin-Markt geprägt hat."
+      },
+      "maksym": {
+        "name": "Maksym Sakharov",
+        "role": "CEO der Gruppe",
+        "bio": "Ehemaliger CEO bei Exflow, Experte für die Skalierung von Finanzinfrastrukturen."
+      },
+      "roman": {
+        "name": "Roman Rossov",
+        "role": "CPO",
+        "bio": "Ehemaliger Produktdirektor bei Wise. Bringt globale Zahlungsexpertise zu Web3."
+      },
+      "khalid": {
+        "name": "Khaled Suleiman",
+        "role": "Vorstandsmitglied",
+        "bio": "ex-CEO bei der National Bank of Abu Dhabi"
+      },
+      "michael": {
+        "name": "Michael Batuev",
+        "role": "Zahlungsverkehrsleiter",
+        "bio": "ex-VISA"
+      }
+    }
+  },
+  "EcosystemPage": {
+    "title": "WFI-Tokenomics",
+    "token": {
+      "name": "$WFI Token",
+      "desc": "Das native Asset von WeChain. Verwendet für Gebühren, Staking und Governance."
+    },
+    "energy": {
+      "title": "Energie-Mechanismus",
+      "desc": "Eine einzigartige Loyalitätseinheit, die durch das Halten von $WFI generiert wird."
+    },
+    "halving": "2-Jahres-Halving-Zyklus",
+    "supply": "Gesamtangebot: 1 Milliarde WFI"
+  },
+  "VisualFlow": {
+    "title": "Konzeptueller Wertefluss",
+    "fiatIn": "Fiat-Einzahlung",
+    "conversion": "Smart-Konvertierung",
+    "onchain": "Onchain-Assets",
+    "spend": "Fiat-Ausgabe / Karte"
+  }
+}
