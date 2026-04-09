@@ -1,0 +1,24 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "technology": "Technology",
+    "platform": "Platform",
+    "ecosystem": "Ecosystem",
+    "about": "About Us",
+    "knowledge": "Knowledge Base",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "title": "Welcome to WeFi Deobank",
+    "description": "The first decentralized onchain bank connecting the stability of traditional finance with the freedom of Web3."
+  },
+  "Dashboard": {
+    "unifiedBalance": "Unified Balance",
+    "energyGeneration": "Energy Generation",
+    "mpcSecurity": "MPC Security (2-of-2)",
+    "bankingModules": "Banking Modules",
+    "fiatBalance": "Fiat Balance",
+    "cryptoAssets": "Crypto Assets"
+  }
+}
