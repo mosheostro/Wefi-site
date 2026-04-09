@@ -1,5 +1,5 @@
 'use client';
-
+import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 
 export default function HomePage() {
@@ -24,12 +24,36 @@ export default function HomePage() {
             {t('hero.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 rounded-full bg-[#007AFF] hover:bg-[#0056b3] text-white font-bold transition-all shadow-blue-glow">
+            <Link href="/ecosystem" className="px-10 py-4 rounded-full bg-[#007AFF] hover:bg-[#0056b3] text-white font-bold transition-all shadow-blue-glow">
               Explore Ecosystem
-            </button>
-            <button className="px-10 py-4 rounded-full border border-white/10 hover:bg-white/5 text-white font-bold transition-all">
+            </Link>
+            <a href="https://gitbook.wefi.co/" target="_blank" rel="noopener noreferrer" className="px-10 py-4 rounded-full border border-white/10 hover:bg-white/5 text-white font-bold transition-all">
               Read Technical Docs
-            </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section (from new.wefi.co) */}
+      <section className="py-12 border-y border-white/5 bg-[#0a0a0a]/50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/5 text-center">
+            <div className="flex flex-col">
+              <div className="text-3xl lg:text-5xl font-bold font-outfit tracking-tighter text-[#007AFF] mb-2 shadow-blue-glow">200k+</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">Users</div>
+            </div>
+            <div className="flex flex-col">
+              <div className="text-3xl lg:text-5xl font-bold font-outfit tracking-tighter mb-2 text-[#8A2BE2]">$150M+</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">Monthly Volume</div>
+            </div>
+            <div className="flex flex-col">
+              <div className="text-3xl lg:text-5xl font-bold font-outfit tracking-tighter mb-2">153</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">Jurisdictions</div>
+            </div>
+            <div className="flex flex-col">
+              <div className="text-3xl lg:text-5xl font-bold font-outfit tracking-tighter mb-2">500k+</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest font-bold">Operational Nodes</div>
+            </div>
           </div>
         </div>
       </section>

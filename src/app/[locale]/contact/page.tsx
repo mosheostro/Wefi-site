@@ -32,21 +32,21 @@ export default function ContactPage() {
         </div>
 
         <div className="flex justify-center gap-12 flex-wrap">
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-[#007AFF] text-2xl">📧</div>
+          <a href="mailto:support@wefi.co" className="flex flex-col items-center gap-2 group cursor-pointer hover:scale-105 transition-transform">
+            <div className="text-[#007AFF] text-2xl group-hover:bg-[#007AFF]/10 p-4 rounded-full transition-colors">📧</div>
             <div className="text-[10px] uppercase font-bold tracking-widest text-white/30">Email</div>
-            <div className="text-sm font-bold">contact@wefi.co</div>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-[#007AFF] text-2xl">🐦</div>
+            <div className="text-sm font-bold text-white group-hover:text-[#007AFF] transition-colors">support@wefi.co</div>
+          </a>
+          <a href="https://x.com/wefi_official" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group cursor-pointer hover:scale-105 transition-transform">
+            <div className="text-[#007AFF] text-2xl group-hover:bg-[#007AFF]/10 p-4 rounded-full transition-colors">🐦</div>
             <div className="text-[10px] uppercase font-bold tracking-widest text-white/30">Twitter / X</div>
-            <div className="text-sm font-bold">@WeFi_Deobank</div>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-[#007AFF] text-2xl">📱</div>
+            <div className="text-sm font-bold text-white group-hover:text-[#007AFF] transition-colors">@wefi_official</div>
+          </a>
+          <a href="https://t.me/+MwwbZbsjFEVjNmVi" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group cursor-pointer hover:scale-105 transition-transform">
+            <div className="text-[#007AFF] text-2xl group-hover:bg-[#007AFF]/10 p-4 rounded-full transition-colors">📱</div>
             <div className="text-[10px] uppercase font-bold tracking-widest text-white/30">Telegram</div>
-            <div className="text-sm font-bold">WeFi Official</div>
-          </div>
+            <div className="text-sm font-bold text-white group-hover:text-[#007AFF] transition-colors">Join Community</div>
+          </a>
         </div>
       </div>
     </div>

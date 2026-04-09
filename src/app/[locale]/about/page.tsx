@@ -19,30 +19,27 @@ export default function AboutPage() {
           </div>
           <div className="glass-panel p-10 relative overflow-hidden group border-[#007AFF]/30 border-2">
             <h3 className="text-2xl font-bold mb-6 font-outfit uppercase">Proof of Solvency</h3>
-            <p className="text-white/60 leading-relaxed text-sm">Real-time public auditing ensures that every dollar in the ecosystem is accounted for on WeChain.</p>
+            <p className="text-white/60 leading-relaxed text-sm">Real-time public auditing ensures that every dollar in the ecosystem is accounted for on WeChain. WeFi is not a traditional bank taking fractional reserves; all fiat is backed securely and verified.</p>
           </div>
         </div>
 
-        <div className="glass-panel p-1 border-white/5 overflow-hidden rounded-3xl mb-24 aspect-[21/9]">
+        <div className="mb-24 p-12 glass-panel border border-white/10 rounded-[40px] bg-gradient-to-b from-white/5 to-transparent">
+          <h2 className="text-3xl font-bold font-outfit tracking-tighter mb-8 uppercase text-center">Led by Crypto Pioneers</h2>
+          <p className="text-white/60 leading-relaxed text-center max-w-2xl mx-auto mb-8">
+            WeFi is built by veterans from Tether, Wise, Bitpanda, Binance, and Visa. This isn’t our first breakthrough. But it might be yours. Your crypto, your rules: earn, spend, and grow without limits.
+          </p>
+          <div className="flex justify-center">
+            <a href="/en/team" className="px-10 py-4 rounded-full bg-[#007AFF] hover:bg-[#0056b3] text-white font-bold tracking-widest uppercase text-xs transition-all shadow-blue-glow">
+              Meet The Founders
+            </a>
+          </div>
+        </div>
+
+        <div className="glass-panel p-1 border-white/5 overflow-hidden rounded-[40px] mb-24 aspect-[21/9]">
           <div className="w-full h-full bg-gradient-to-br from-[#121212] via-[#007AFF]/10 to-[#121212] flex items-center justify-center relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[1px] bg-white/10"></div>
             <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#007AFF] to-transparent animate-pulse shadow-blue-glow"></div>
-            <div className="text-4xl text-white/20 font-bold uppercase tracking-[1em] font-outfit z-10 select-none">TRUST MATHEMATICS</div>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="flex flex-col gap-4">
-            <div className="text-3xl font-bold font-outfit tracking-tighter shadow-blue-glow">2026</div>
-            <div className="text-xs text-white/40 uppercase tracking-widest font-bold">Phase: Episode 3</div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <div className="text-3xl font-bold font-outfit tracking-tighter shadow-blue-glow">140M+</div>
-            <div className="text-xs text-white/40 uppercase tracking-widest font-bold">Merchant Reach</div>
-          </div>
-          <div className="flex flex-col gap-4">
-            <div className="text-3xl font-bold font-outfit tracking-tighter shadow-blue-glow">2 OF 2</div>
-            <div className="text-xs text-white/40 uppercase tracking-widest font-bold">MPC Protocol Architecture</div>
+            <div className="text-4xl text-white/20 font-bold uppercase tracking-[1em] font-outfit z-10 select-none text-center leading-loose">TRUST<br/>MATHEMATICS</div>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ export default function BlogPage() {
               <h3 className="text-xl font-bold font-outfit tracking-tight group-hover:text-[#007AFF] transition-all duration-300 leading-tight mb-8">
                 {post.title}
               </h3>
-              <button className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 group-hover:text-white transition-colors">Read Article +</button>
+              <a href="https://www.wefi.co/blog" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#007AFF] hover:text-white transition-colors">Read Article +</a>
             </div>
           </div>
         ))}

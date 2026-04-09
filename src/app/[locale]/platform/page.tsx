@@ -6,24 +6,28 @@ export default function ProductsPage() {
   const products = [
     {
       title: "Unified Balance",
-      desc: "Instant consolidation of your USD, EUR, BTC, and WFI in a single institutional-grade interface.",
-      icon: "⚖️"
+      desc: "Powered by DEONE - Onchain Banking. Money Beyond Borders. Blends the reliability of banking with the limitless possibilities of blockchain.",
+      icon: "⚖️",
+      href: "https://www.deone.io/"
     },
     {
       title: "WeFi Visa Cards",
       desc: "Spend your digital assets worldwide with automated tax-compliant conversion to local fiat.",
-      icon: "💳"
+      icon: "💳",
+      href: "https://new.wefi.co/platform"
     },
     {
       title: "Decentralized Credit",
       desc: "Borrow against your assets instantly without credit checks, powered by Onchain Accounting.",
-      icon: "📈"
+      icon: "📈",
+      href: "https://gitbook.wefi.co/"
     },
     {
       title: "Cloud-Based Mining",
       desc: "Participate in the WFI emission protocol via efficient cloud-hosted mining modules (CBM-20).",
       icon: "☁️",
-      image: "/wefi_cbm_mining_1775748198988.png"
+      image: "/wefi_cbm_mining_1775748198988.png",
+      href: "https://gitbook.wefi.co/the-architectures-of-wefi/cloud-based-mining"
     }
   ];
 
@@ -49,9 +53,9 @@ export default function ProductsPage() {
               </div>
             )}
             
-            <button className="mt-8 text-sm font-bold text-[#007AFF] uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
+            <a href={product.href} target="_blank" rel="noopener noreferrer" className="mt-8 text-sm font-bold text-[#007AFF] uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
               Learn More <span>→</span>
-            </button>
+            </a>
           </div>
         ))}
       </div>

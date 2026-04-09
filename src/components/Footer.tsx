@@ -50,14 +50,21 @@ export default function Footer() {
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#007AFF] mb-6">Connect</h4>
             <div className="flex gap-4">
-              {['🐦', '📱', '📧', '👾'].map((icon, i) => (
-                <div key={i} className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
-                  {icon}
-                </div>
-              ))}
+              <a href="https://x.com/wefi_official" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
+                🐦
+              </a>
+              <a href="https://t.me/+MwwbZbsjFEVjNmVi" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
+                📱
+              </a>
+              <a href="mailto:contact@wefi.co" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
+                📧
+              </a>
+              <a href="https://gitbook.wefi.co" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
+                📖
+              </a>
             </div>
             <div className="mt-8">
-              <div className="text-[8px] text-white/20 uppercase tracking-[0.2em] font-bold mb-2">Episode 3 Deployment</div>
+              <div className="text-[8px] text-white/20 uppercase tracking-[0.2em] font-bold mb-2">WeFi Global Infrastructure</div>
               <div className="text-[10px] text-white/40 font-bold">© 2026 WeFi Deobank Network. All rights reserved.</div>
             </div>
           </div>
