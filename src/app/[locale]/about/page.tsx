@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 export default function AboutPage() {
   const t = useTranslations('AboutPage');
@@ -29,9 +30,9 @@ export default function AboutPage() {
             {t('pioneers.desc')}
           </p>
           <div className="flex justify-center">
-            <a href="/en/team" className="px-10 py-4 rounded-full bg-[#007AFF] hover:bg-[#0056b3] text-white font-bold tracking-widest uppercase text-xs transition-all shadow-blue-glow">
+            <Link href="/team" className="px-10 py-4 rounded-full bg-[#007AFF] hover:bg-[#0056b3] text-white font-bold tracking-widest uppercase text-xs transition-all shadow-blue-glow">
               {t('pioneers.btn')}
-            </a>
+            </Link>
           </div>
         </div>
 
