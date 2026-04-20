@@ -41,13 +41,6 @@ export default function ProductsPage() {
             <h3 className="text-2xl md:text-3xl font-bold mb-4 font-outfit tracking-tight min-h-[3.5rem] flex items-center">{t(`products.${product.title}.title`)}</h3>
             <p className="text-white/60 leading-relaxed mb-6 flex-1">{t(`products.${product.title}.desc`)}</p>
 
-            {product.image && (
-              <div className="mt-2 mb-2 rounded-2xl overflow-hidden aspect-video max-h-56 border border-white/5 relative">
-                <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent opacity-40"></div>
-              </div>
-            )}
-
             <a href={product.href} target="_blank" rel="noopener noreferrer" className="mt-6 text-sm font-bold text-[#007AFF] uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
               {t('learnMore')} <span>→</span>
             </a>
