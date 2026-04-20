@@ -1,0 +1,14 @@
+# Introduction
+The financial landscape is undergoing a transition from centralized, siloed institutions toward more open and integrated digital systems. As traditional banking faces limitations in speed, cross-border efficiency, and accessibility, the concept of the Deobank has emerged. This model represents a hybrid evolution, combining the regulatory structure of traditional finance with the transparency and automation offered by decentralized blockchain technology.
+
+# What is a Deobank
+A Deobank, or decentralized bank, is a financial institution that operates by merging traditional banking licenses with decentralized finance (DeFi) protocols. Unlike a standard bank that relies entirely on internal ledgers and centralized control, a Deobank uses blockchain infrastructure to facilitate transactions, lending, and asset management. It allows users to access sophisticated financial services while maintaining greater control over their assets through non-custodial technology.
+
+# Differences from traditional banking
+Traditional banking relies on a centralized intermediary to validate transactions and hold user deposits, often resulting in slow settlement times and limited transparency. In contrast, a Deobank utilizes smart contracts—self-executing code on a blockchain—to automate many of these processes. While traditional banks operate within strict geographic and institutional boundaries, Deobanks are designed for global interoperability. Furthermore, whereas traditional banks are custodial, meaning they control the user's funds, the Deobank model prioritizes non-custodial structures where users interact with services via their own digital wallets.
+
+# How WeFi fits into the model
+WeFi serves as a foundational ecosystem within the Deobank architecture by providing the necessary technical and legal bridge between these two sectors. It integrates a non-custodial protocol with traditional banking services, such as debit cards and IBAN accounts. By utilizing a modular infrastructure, WeFi enables the automation of compliance and settlement processes on-chain. This allows users to hold and use their assets in a decentralized manner while still being able to interact with the global traditional financial system for everyday payments and transfers.
+
+# Conclusion
+The Deobank model represents a shift toward a more transparent and user-centric banking experience. By leveraging blockchain technology to handle the core functions of finance, it addresses the inefficiencies of traditional systems. Organizations like WeFi demonstrate that it is possible to maintain regulatory standards while providing the technical advantages of decentralization, effectively creating a more integrated global financial environment.

@@ -13,7 +13,7 @@
   },
   "HomePage": {
     "hero": {
-      "title": "Die erste Onchain-Deobank der Welt",
+      "title": "Die erste On-Chain-Deobank, die traditionelle Finanzen und Web3 verbindet",
       "subtitle": "Brücke zwischen traditionellem Finanzwesen und Web3",
       "description": "WeFi nutzt die WeChain-Blockchain, um sichere, transparente und regulierte Bankdienstleistungen direkt on-chain anzubieten."
     },
@@ -40,11 +40,21 @@
     "narrative": {
       "title": "Onchain Solvenz",
       "quote": "\"WeFi ist nicht nur eine weitere Bank; es ist ein Protokoll für Vertrauen. Indem wir das interne Kontobuch auf WeChain verlagern, eliminieren wir menschliche Fehler und Betrug.\"",
-      "role": "Vorsitzender von WeFi"
+      "role": "Vorsitzender von WeFi und Mitbegründer von USDT (Tether)",
+      "mosheRole": "Ökosystem-Teilnehmer"
     },
     "buttons": {
       "ecosystem": "Ökosystem erkunden",
       "docs": "Technische Dokumentation"
+    },
+    "visualFlow": {
+      "step1": "Traditionelles Finanzwesen",
+      "step2": "Krypto / WeChain",
+      "step3": "WeFi Deobank",
+      "step4": "Globale Zahlungen"
+    },
+    "credibility": {
+      "title": "Unterstützt von Visionären und Ökosystem-Pionieren"
     }
   },
   "AboutPage": {
@@ -98,6 +108,11 @@
         "name": "Michael Batuev",
         "role": "Leiter Zahlungsverkehr",
         "bio": "ex-VISA"
+      },
+      "evgeniy": {
+        "name": "Moshé Ostrovsky",
+        "role": "Ökosystem-Teilnehmer",
+        "bio": "Projektteilnehmer und aktiver Mitwirkender an der WeFi-Ökosystem-Infrastruktur sowie der UI-Entwicklung."
       }
     }
   },
@@ -119,6 +134,14 @@
       "cycle": "Zyklus",
       "mining": "Mining",
       "limit": "Limit"
+    },
+    "supporters": {
+      "title": "Ökosystem-Unterstützer & Mitwirkende"
+    },
+    "moshe": {
+      "name": "Moshé Ostrovsky",
+      "role": "Ökosystem-Teilnehmer",
+      "bio": "Projektteilnehmer und aktiver Mitwirkender an der WeFi-Ökosystem-Infrastruktur sowie der UI-Entwicklung."
     }
   },
   "VisualFlow": {
@@ -151,9 +174,21 @@
     "title": "Neueste Erkenntnisse",
     "readArticle": "Artikel lesen +",
     "posts": [
-      { "title": "Episode 3: Der Beginn des Onchain-Bankings", "date": "April 2026", "category": "Ökosystem" },
-      { "title": "Mcp verstehen: Warum Seed Phrases veraltet sind", "date": "März 2026", "category": "Technologie" },
-      { "title": "WeFi Roadmap: Skalierung der globalen Liquidität", "date": "Februar 2026", "category": "Vision" }
+      {
+        "title": "Episode 3: Der Beginn des Onchain-Bankings",
+        "date": "April 2026",
+        "category": "Ökosystem"
+      },
+      {
+        "title": "Mcp verstehen: Warum Seed Phrases veraltet sind",
+        "date": "März 2026",
+        "category": "Technologie"
+      },
+      {
+        "title": "WeFi Roadmap: Skalierung der globalen Liquidität",
+        "date": "Februar 2026",
+        "category": "Vision"
+      }
     ]
   },
   "PlatformPage": {
@@ -189,10 +224,22 @@
   "KnowledgePage": {
     "title": "Wissensdatenbank",
     "faqs": [
-      { "q": "Was ist eine Deobank?", "a": "Eine dezentralisierte Onchain-Bank, die über Smart Contracts arbeitet." },
-      { "q": "Wie funktioniert MPC-Sicherheit?", "a": "Transaktionen erfordern eine 2-aus-2 Signatur zur Vermeidung von Fehlern." },
-      { "q": "Was ist der Nutzen von $WFI?", "a": "Der Token wird verwendet, um Netzwerkgebühren zu bezahlen." },
-      { "q": "Wie generiere ich Energie?", "a": "Energie wird durch das Halten von $WFI in der Wallet generiert." }
+      {
+        "q": "Was ist eine Deobank?",
+        "a": "Eine dezentralisierte Onchain-Bank, die über Smart Contracts arbeitet."
+      },
+      {
+        "q": "Wie funktioniert MPC-Sicherheit?",
+        "a": "Transaktionen erfordern eine 2-aus-2 Signatur zur Vermeidung von Fehlern."
+      },
+      {
+        "q": "Was ist der Nutzen von $WFI?",
+        "a": "Der Token wird verwendet, um Netzwerkgebühren zu bezahlen."
+      },
+      {
+        "q": "Wie generiere ich Energie?",
+        "a": "Energie wird durch das Halten von $WFI in der Wallet generiert."
+      }
     ],
     "gitbook": {
       "title": "GitBook Dokumentation",

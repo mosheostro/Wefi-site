@@ -1,0 +1,16 @@
+# WeFi Technology Stack: WeChain and MPC Infrastructure
+
+# Introduction
+The convergence of traditional banking and decentralized finance requires a robust underlying infrastructure capable of handling high transaction throughput while maintaining institutional-grade security. WeFi addresses this challenge through a specialized technology stack that moves beyond the limitations of legacy databases and standard blockchain implementations. By utilizing a custom-built blockchain layer and advanced cryptographic protocols, the ecosystem provides a foundation for "Deobanking" that is both scalable and resilient.
+
+# WeChain overview
+WeChain is the dedicated blockchain architecture developed to serve as the settlement and operational layer for the WeFi ecosystem. Unlike general-purpose blockchains, WeChain is optimized for financial transactions and high-frequency data processing. It operates as a high-performance network that records all on-chain banking activities, including asset transfers, lending operations, and protocol interactions. By using a modular design, WeChain ensures interoperability with other major blockchain networks while maintaining a sovereign environment where transaction costs are predictable and settlement is near-instantaneous.
+
+# MPC explanation
+Multi-Party Computation (MPC) is a sophisticated cryptographic protocol that allows multiple parties to jointly compute a function while keeping their individual inputs private. In the context of the WeFi infrastructure, MPC is used to manage digital asset security without relying on a single private key. Instead of a traditional private key that can be a single point of failure, the key is mathematically split into several "shares" distributed across different isolated nodes. No single entity ever possesses the full key; instead, the nodes collaborate to sign transactions through a threshold signature scheme, ensuring that the private key never exists in its entirety in any one location.
+
+# Security model
+The security model of the WeFi stack is built on the principle of distributed trust. By combining WeChain’s immutable ledger with MPC-based key management, the system eliminates the risks associated with centralized custody. Security is enforced at the architectural level through "sharding" of cryptographic responsibilities, meaning an attacker would need to compromise multiple independent systems simultaneously to gain access to funds. Additionally, the system integrates real-time monitoring and automated compliance checks directly into the blockchain layer, providing a proactive defense against unauthorized activity and ensuring that all operations align with predefined safety parameters.
+
+# Conclusion
+The combination of WeChain and MPC infrastructure provides the technical framework necessary to bridge the gap between traditional finance and Web3. This stack ensures that the WeFi ecosystem can offer the speed and familiarity of a modern neo-bank while delivering the transparency and self-sovereignty of a decentralized protocol. By decentralizing both the ledger and the security keys, WeFi establishes a resilient foundation for the future of on-chain banking.

@@ -48,16 +48,36 @@ export default function VisualFlowPage() {
       </div>
 
       <div className="mt-32 max-w-4xl w-full">
-        <div className="glass-panel p-1 rounded-3xl overflow-hidden aspect-video relative group">
-          <img 
-            src="/wefi_fiat_crypto_flow_1775747110231.png" 
-            alt="Fiat to Crypto Visual Flow"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-60"></div>
-          <div className="absolute bottom-8 left-8 right-8 text-center md:text-left">
-            <h4 className="text-2xl font-bold font-outfit mb-2">Automated Liquidity Lifecycle</h4>
-            <p className="text-white/60 text-sm">Real-time settlement between banking gateways and WeChain smart contracts.</p>
+        <div className="glass-panel p-1 rounded-3xl overflow-hidden relative group border-[#007AFF]/30">
+          <div className="w-full bg-gradient-to-br from-[#121212] via-[#1a1a1a] to-[#121212] p-8 md:p-16 flex flex-col items-center justify-center min-h-[400px]">
+             
+             {/* Fallback Flow UI */}
+             <div className="flex flex-col md:flex-row items-center justify-between w-full h-full relative z-10 gap-4">
+               {['Fiat', 'Crypto', 'Deobank', 'Payments'].map((item, i) => (
+                 <div key={item} className="flex flex-col items-center text-center group cursor-default relative">
+                   <div className="w-20 h-20 rounded-2xl glass-panel bg-white/5 border border-white/10 flex items-center justify-center text-xl font-bold uppercase tracking-widest text-[#007AFF] shadow-blue-glow transition-transform hover:scale-110 mb-4 z-20 relative">
+                     {item}
+                   </div>
+                   {/* Connectors */}
+                   {i < 3 && (
+                     <div className="hidden md:block absolute top-[40px] left-[80px] w-[calc(100%+4rem)] h-0.5 bg-gradient-to-r from-[#007AFF] via-[#8A2BE2] to-[#007AFF] z-10 overflow-hidden">
+                        <div className="w-1/2 h-full bg-white/50 animate-flow-move"></div>
+                     </div>
+                   )}
+                   {i < 3 && (
+                     <div className="md:hidden w-0.5 h-12 bg-gradient-to-b from-[#007AFF] to-[#8A2BE2] my-2 overflow-hidden mx-auto">
+                        <div className="w-full h-1/2 bg-white/50 animate-pulse"></div>
+                     </div>
+                   )}
+                 </div>
+               ))}
+             </div>
+
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/80 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+          <div className="absolute bottom-8 left-8 right-8 text-center md:text-left pointer-events-none z-20">
+            <h4 className="text-2xl font-bold font-outfit mb-2 text-white">Automated Liquidity Lifecycle</h4>
+            <p className="text-white/60 text-sm">Real-time settlement visually mapped: Fiat → Crypto → Deobank → Payments.</p>
           </div>
         </div>
       </div>

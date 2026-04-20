@@ -94,7 +94,7 @@ export default function EcosystemPage() {
       </div>
 
       {/* Amortization Table / Visual */}
-      <div className="glass-panel p-1 border-white/5 overflow-hidden rounded-[40px]">
+      <div className="glass-panel p-1 border-white/5 overflow-hidden rounded-[40px] mb-24">
         <div className="bg-gradient-to-br from-[#121212] via-[#007AFF]/5 to-[#121212] p-12 md:p-20 text-center">
           <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 uppercase tracking-tighter">{t('governance.title')}</h2>
           <div className="max-w-2xl mx-auto text-white/40 text-sm leading-relaxed mb-12">
@@ -111,6 +111,26 @@ export default function EcosystemPage() {
                 <div className="text-[10px] text-[#007AFF] uppercase tracking-[0.3em] font-bold">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Ecosystem Supporters & Contributors */}
+      <div className="mt-16 text-center">
+        <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-12 uppercase tracking-tighter shadow-blue-glow">{t('supporters.title') || "Ecosystem Supporters & Contributors"}</h2>
+        
+        <div className="flex justify-center flex-wrap gap-8">
+          {/* Moshé Ostrovsky Card */}
+          <div className="glass-panel p-8 w-full max-w-sm flex flex-col items-center text-center group relative overflow-hidden">
+             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#8A2BE2] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+             <div className="w-24 h-24 rounded-full bg-slate-100 border-4 border-white/10 group-hover:border-[#8A2BE2] overflow-hidden transition-all shadow-lg mb-6 shadow-[#8A2BE2]/20 flex items-center justify-center">
+               <img src="/evgeniy.png" alt="Moshé Ostrovsky - Project Contributor" className="w-[110%] h-[110%] max-w-none object-cover object-top -translate-x-[3%] translate-y-[8%] scale-90" />
+             </div>
+             <h3 className="text-2xl font-bold font-outfit tracking-tighter uppercase mb-2">Moshé Ostrovsky</h3>
+             <div className="text-[10px] text-[#8A2BE2] font-bold uppercase tracking-[0.3em] mb-4">{t('moshe.role')}</div>
+             <p className="text-white/50 text-sm leading-relaxed">
+                {t('moshe.bio')}
+             </p>
           </div>
         </div>
       </div>

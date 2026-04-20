@@ -23,7 +23,7 @@ export default function ProductsPage() {
       title: "mining",
       icon: "☁️",
       image: "/wefi_cbm_mining_1775748198988.png",
-      href: "https://gitbook.wefi.co/the-architectures-of-wefi/cloud-based-mining"
+      href: "https://gitbook.wefi.co/"
     }
   ];
 
