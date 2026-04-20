@@ -57,7 +57,7 @@ export default function Footer() {
               <a href="https://t.me/+MwwbZbsjFEVjNmVi" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
                 📱
               </a>
-              <a href="mailto:contact@wefi.co" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
+              <a href="mailto:support@wefi.co" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">
                 📧
               </a>
               <a href="https://gitbook.wefi.co" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors">

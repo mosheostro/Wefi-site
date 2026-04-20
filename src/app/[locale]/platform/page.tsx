@@ -22,7 +22,6 @@ export default function ProductsPage() {
     {
       title: "mining",
       icon: "☁️",
-      image: "/wefi_cbm_mining_1775748198988.png",
       href: "https://gitbook.wefi.co/"
     }
   ];
@@ -41,13 +40,6 @@ export default function ProductsPage() {
             <div className="text-4xl mb-6">{product.icon}</div>
             <h3 className="text-2xl md:text-3xl font-bold mb-4 font-outfit tracking-tight min-h-[3.5rem] flex items-center">{t(`products.${product.title}.title`)}</h3>
             <p className="text-white/60 leading-relaxed mb-6 flex-1">{t(`products.${product.title}.desc`)}</p>
-
-            {product.image && (
-              <div className="mt-2 mb-2 rounded-2xl overflow-hidden aspect-video max-h-56 border border-white/5 relative">
-                <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent opacity-40"></div>
-              </div>
-            )}
 
             <a href={product.href} target="_blank" rel="noopener noreferrer" className="mt-6 text-sm font-bold text-[#007AFF] uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
               {t('learnMore')} <span>→</span>
@@ -76,13 +68,43 @@ export default function ProductsPage() {
               </div>
             </div>
           </div>
-          <div className="relative min-h-[400px] h-full">
-            <img 
-              src="/wefi_mpc_security_diagram_1775747790452.png" 
-              alt="MPC Security Diagram" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#121212] via-transparent to-transparent"></div>
+          <div className="relative min-h-[400px] h-full overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#121212] to-[#1a0b2e] flex items-center justify-center">
+            {/* Decorative grid backdrop */}
+            <div
+              className="absolute inset-0 opacity-30"
+              style={{
+                backgroundImage:
+                  'linear-gradient(rgba(0,122,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(0,122,255,0.15) 1px, transparent 1px)',
+                backgroundSize: '40px 40px',
+              }}
+            ></div>
+            {/* Glow halos */}
+            <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-[#007AFF]/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-[#8A2BE2]/20 rounded-full blur-3xl"></div>
+
+            {/* MPC shard schematic */}
+            <div className="relative z-10 flex flex-col items-center gap-8 px-8">
+              <div className="flex items-center gap-10">
+                <div className="w-20 h-20 rounded-2xl border border-[#007AFF]/50 bg-[#007AFF]/10 backdrop-blur flex items-center justify-center text-3xl shadow-[0_0_30px_rgba(0,122,255,0.3)]">
+                  🔐
+                </div>
+                <div className="w-12 h-[2px] bg-gradient-to-r from-[#007AFF] to-[#8A2BE2]"></div>
+                <div className="w-24 h-24 rounded-full border-2 border-white/20 bg-white/5 backdrop-blur flex items-center justify-center text-4xl shadow-[0_0_40px_rgba(138,43,226,0.3)]">
+                  🛡️
+                </div>
+                <div className="w-12 h-[2px] bg-gradient-to-r from-[#8A2BE2] to-[#007AFF]"></div>
+                <div className="w-20 h-20 rounded-2xl border border-[#8A2BE2]/50 bg-[#8A2BE2]/10 backdrop-blur flex items-center justify-center text-3xl shadow-[0_0_30px_rgba(138,43,226,0.3)]">
+                  🔐
+                </div>
+              </div>
+              <div className="flex items-center gap-6 text-[10px] uppercase tracking-[0.3em] font-bold text-white/50">
+                <span>Shard A</span>
+                <span className="text-white/30">2-of-2</span>
+                <span>Shard B</span>
+              </div>
+            </div>
+
+            <div className="absolute inset-0 bg-gradient-to-r from-[#121212] via-transparent to-transparent pointer-events-none"></div>
           </div>
         </div>
       </div>
