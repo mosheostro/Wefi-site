@@ -49,8 +49,14 @@ export default function VisualFlowPage() {
 
       <div className="mt-32 max-w-4xl w-full">
         <div className="glass-panel p-1 rounded-3xl overflow-hidden relative group border-[#007AFF]/30">
+          {/* Mobile header: shown ABOVE the flow to avoid overlapping the Payments node */}
+          <div className="md:hidden px-8 pt-8 pb-2 text-center z-20 relative">
+            <h4 className="text-2xl font-bold font-outfit mb-2 text-white">Automated Liquidity Lifecycle</h4>
+            <p className="text-white/60 text-sm">Real-time settlement visually mapped: Fiat → Crypto → Deobank → Payments.</p>
+          </div>
+
           <div className="w-full bg-gradient-to-br from-[#121212] via-[#1a1a1a] to-[#121212] p-8 md:p-16 flex flex-col items-center justify-center min-h-[400px]">
-             
+
              {/* Fallback Flow UI */}
              <div className="flex flex-col md:flex-row items-center justify-between w-full h-full relative z-10 gap-4">
                {['Fiat', 'Crypto', 'Deobank', 'Payments'].map((item, i) => (
@@ -75,7 +81,8 @@ export default function VisualFlowPage() {
 
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/80 via-transparent to-transparent opacity-60 pointer-events-none"></div>
-          <div className="absolute bottom-8 left-8 right-8 text-center md:text-left pointer-events-none z-20">
+          {/* Desktop overlay: kept exactly as before — absolute positioning unchanged */}
+          <div className="hidden md:block absolute bottom-8 left-8 right-8 text-center md:text-left pointer-events-none z-20">
             <h4 className="text-2xl font-bold font-outfit mb-2 text-white">Automated Liquidity Lifecycle</h4>
             <p className="text-white/60 text-sm">Real-time settlement visually mapped: Fiat → Crypto → Deobank → Payments.</p>
           </div>

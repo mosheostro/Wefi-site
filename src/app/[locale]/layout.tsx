@@ -1,8 +1,17 @@
 import { ReactNode } from "react";
+import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import '@/app/globals.css';
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import "@/app/globals.css";
+
+type Locale = (typeof routing.locales)[number];
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function LocaleLayout({
   children,
@@ -13,17 +22,23 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
+  if (!routing.locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
+
   return (
-    <NextIntlClientProvider locale={locale} messages={require(`../../locales/${locale}.json`)}>
-      <html lang={locale} dir={locale === 'he' ? 'rtl' : 'ltr'}>
-        <body className="bg-[#121212] text-white antialiased min-h-screen flex flex-col">
+    <html lang={locale} dir={locale === "he" ? "rtl" : "ltr"}>
+      <body className="bg-[#121212] text-white antialiased min-h-screen flex flex-col">
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Navigation currentLocale={locale} />
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
           <Footer />
-        </body>
-      </html>
-    </NextIntlClientProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
