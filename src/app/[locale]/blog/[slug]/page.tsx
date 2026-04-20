@@ -1,21 +1,34 @@
 import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
 import { blogPosts } from '@/data/blog';
-import { Link } from '@/i18n/routing';
+import { Link, routing } from '@/i18n/routing';
 
-// This function pre-generates paths at build time (optional but good for static stability)
-export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+// Pre-generate paths at build time for every locale × slug combination
+export function generateStaticParams() {
+  return routing.locales.flatMap((locale) =>
+    blogPosts.map((post) => ({ locale, slug: post.slug }))
+  );
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string, locale: string }> }) {
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string; locale: string }>;
+}) {
   const { slug, locale } = await params;
+
+  // Required for server components that use next-intl APIs with static rendering
+  setRequestLocale(locale);
+
   const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
   }
+
+  const fallback = routing.defaultLocale;
+  const title = post.title[locale] ?? post.title[fallback];
+  const content = post.content[locale] ?? post.content[fallback];
 
   // Define a simple parser for the lightweight markdown we generated
   const formatContent = (text: string) => {
@@ -33,16 +46,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <article className="min-h-screen bg-[#0a0a0a]">
       {/* Blog Header Image */}
       <div className="w-full h-[40vh] md:h-[60vh] relative">
-        <img src={post.image} alt={post.title[locale] || post.title['en']} className="w-full h-full object-cover" />
+        <img src={post.image} alt={title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent"></div>
-        
+
         <div className="absolute bottom-0 left-0 w-full p-8 md:p-16">
           <div className="container mx-auto max-w-4xl">
             <div className="inline-flex items-center px-4 py-1.5 bg-[#007AFF]/20 border border-[#007AFF] rounded-full text-[10px] font-bold uppercase tracking-widest text-[#007AFF] mb-6 backdrop-blur-md shadow-blue-glow">
               {post.category}
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-outfit tracking-tighter text-white mb-6 leading-[1.1]">
-              {post.title[locale] || post.title['en']}
+              {title}
             </h1>
             <div className="flex items-center gap-6 text-sm text-white/50 font-bold uppercase tracking-widest">
               <span>{post.date}</span>
@@ -55,7 +68,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* Blog Content Body */}
       <div className="container mx-auto max-w-4xl px-4 py-16 md:py-24">
-        
+
         {/* Source Reference Header */}
         <div className="mb-12 p-6 glass-panel border border-white/5 bg-white/5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4">
            <div className="text-xs text-white/40 uppercase tracking-widest font-bold">
@@ -68,22 +81,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         {/* Formatted Text Content */}
         <div className="prose prose-invert prose-lg max-w-none prose-p:text-white/60 prose-headings:font-outfit">
-           {formatContent(post.content[locale] || post.content['en'])}
+           {formatContent(content)}
         </div>
 
         {/* Internal Cross Links */}
         <div className="mt-24 pt-12 border-t border-white/10">
            <h3 className="text-2xl font-bold font-outfit text-white mb-6">Explore More Knowledge</h3>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-             {blogPosts.filter(p => p.slug !== slug).map(other => (
-               <Link key={other.slug} href={`/blog/${other.slug}`} className="p-4 glass-panel hover:bg-white/5 transition-colors border border-white/5 rounded-xl group flex items-center gap-4">
-                 <img src={other.image} className="w-16 h-16 rounded-lg object-cover opacity-80 group-hover:opacity-100" alt={other.title['en']} />
-                 <div>
-                   <div className="text-[9px] uppercase tracking-widest text-[#007AFF] font-bold mb-1">{other.category}</div>
-                   <div className="text-sm font-bold text-white/80 group-hover:text-[#007AFF] transition-colors line-clamp-2">{other.title[locale] || other.title['en']}</div>
-                 </div>
-               </Link>
-             ))}
+             {blogPosts.filter(p => p.slug !== slug).map(other => {
+               const otherTitle = other.title[locale] ?? other.title[fallback];
+               return (
+                 <Link key={other.slug} href={`/blog/${other.slug}`} className="p-4 glass-panel hover:bg-white/5 transition-colors border border-white/5 rounded-xl group flex items-center gap-4">
+                   <img src={other.image} className="w-16 h-16 rounded-lg object-cover opacity-80 group-hover:opacity-100" alt={otherTitle} />
+                   <div>
+                     <div className="text-[9px] uppercase tracking-widest text-[#007AFF] font-bold mb-1">{other.category}</div>
+                     <div className="text-sm font-bold text-white/80 group-hover:text-[#007AFF] transition-colors line-clamp-2">{otherTitle}</div>
+                   </div>
+                 </Link>
+               );
+             })}
            </div>
         </div>
 
