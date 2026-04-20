@@ -18,12 +18,12 @@ export default function BlogPage() {
           <h1 className="text-4xl md:text-6xl font-bold font-outfit uppercase tracking-tighter text-center md:text-left">Latest Insights</h1>
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPosts.map((post) => (
           <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col glass-panel border-white/5 overflow-hidden hover:border-[#007AFF]/50 transition-all duration-300">
             <div className="aspect-[16/10] bg-[#121212] flex items-center justify-center relative overflow-hidden">
-              <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
+              <img src={post.image} alt={post.title[locale]} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
               <div className="absolute top-4 left-4 px-3 py-1 bg-[#121212]/90 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-bold uppercase tracking-widest text-[#007AFF] shadow-lg">
                 {post.category}
               </div>
