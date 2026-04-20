@@ -34,22 +34,22 @@ export default function ProductsPage() {
         <p className="text-xl text-white/40 max-w-2xl mx-auto">{t('desc')}</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-32 auto-rows-fr">
         {products.map((product) => (
-          <div key={product.title} className="glass-panel p-10 hover:border-[#007AFF] transition-all group relative overflow-hidden flex flex-col">
+          <div key={product.title} className="glass-panel p-8 md:p-10 hover:border-[#007AFF] transition-all group relative overflow-hidden flex flex-col h-full">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#007AFF]/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:bg-[#007AFF]/10 transition-colors"></div>
             <div className="text-4xl mb-6">{product.icon}</div>
-            <h3 className="text-3xl font-bold mb-4 font-outfit tracking-tight">{t(`products.${product.title}.title`)}</h3>
-            <p className="text-white/60 leading-relaxed mb-8 flex-1">{t(`products.${product.title}.desc`)}</p>
-            
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 font-outfit tracking-tight min-h-[3.5rem] flex items-center">{t(`products.${product.title}.title`)}</h3>
+            <p className="text-white/60 leading-relaxed mb-6 flex-1">{t(`products.${product.title}.desc`)}</p>
+
             {product.image && (
-              <div className="mt-8 rounded-2xl overflow-hidden aspect-video border border-white/5 relative">
+              <div className="mt-2 mb-2 rounded-2xl overflow-hidden aspect-video max-h-56 border border-white/5 relative">
                 <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent opacity-40"></div>
               </div>
             )}
-            
-            <a href={product.href} target="_blank" rel="noopener noreferrer" className="mt-8 text-sm font-bold text-[#007AFF] uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
+
+            <a href={product.href} target="_blank" rel="noopener noreferrer" className="mt-6 text-sm font-bold text-[#007AFF] uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
               {t('learnMore')} <span>→</span>
             </a>
           </div>
